@@ -1,0 +1,422 @@
+GEMINI_API_KEY=PLACEHOLDER_API_KEY
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+import React from 'react';
+import Navbar from './components/Navbar';
+import TickerTape from './components/TickerTape';
+import Hero from './components/Hero';
+import Countdown from './components/Countdown';
+import Features from './components/Features';
+import Syllabus from './components/Syllabus';
+import ChartShowcase from './components/ChartShowcase';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
+import FloatingCTA from './components/FloatingCTA';
+import CompoundCalculator from './components/CreativeStudio';
+
+const App: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-amber-500 selection:text-black flex flex-col">
+      <Navbar />
+      
+      <main className="flex-grow pt-16 md:pt-20">
+        <TickerTape />
+        <Hero />
+        
+        {/* Pain/Empathy Section */}
+        <section id="revelation" className="py-12 md:py-16 px-6 bg-gradient-to-b from-[#0a0a0a] to-[#050505]">
+          <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+            <div className="w-full md:w-1/2">
+               <div className="relative">
+                  <div className="absolute -inset-4 bg-amber-500/10 blur-2xl rounded-full"></div>
+                  <img 
+                    src="https://img.freepik.com/premium-photo/forex-trading-chart-background-exchange-digital-money-fund_1029476-2652.jpg" 
+                    alt="TradingView" 
+                    className="relative rounded-[1.5rem] md:rounded-[2.5rem] border border-white/10 grayscale hover:grayscale-0 transition-all duration-700 shadow-2xl w-full aspect-video object-cover"
+                  />
+               </div>
+            </div>
+            <div className="w-full md:w-1/2 space-y-4 md:space-y-6">
+              <h2 className="text-amber-500 font-bold uppercase tracking-[0.3em] text-[10px] italic">El Factor Humano</h2>
+              <h3 className="text-2xl md:text-4xl font-black uppercase leading-tight tracking-tighter">Sabemos lo que es <span className="text-gray-600">quemar una cuenta.</span></h3>
+              <p className="text-sm md:text-base text-gray-400 font-light leading-relaxed">
+                Intentaste con indicadores gratuitos, seguiste consejos de YouTube y cada vez que comprabas, el mercado caía. No es mala suerte. Es que te enseñaron a ser la <strong>liquidez</strong> de las instituciones. Nosotros estuvimos ahí hasta que entendimos la única verdad: El rastro del dinero profesional.
+              </p>
+              <div className="flex gap-4 items-center pt-2">
+                <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center font-black text-black italic text-xs">L</div>
+                <p className="text-[10px] font-bold text-gray-300 uppercase tracking-widest italic">Leonardo, Tu Mentor en Wall Street</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <Features />
+        
+        <CompoundCalculator />
+        
+        <Syllabus />
+
+        {/* The Revelation Section - Compactada */}
+        <section className="relative h-[45vh] md:h-[40vh] overflow-hidden flex items-center justify-center">
+          <div className="absolute inset-0 z-0">
+             <img 
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2026&auto=format&fit=crop" 
+              alt="Análisis Institucional" 
+              className="w-full h-full object-cover brightness-[0.15]"
+            />
+            <div className="absolute inset-0 bg-black/40"></div>
+          </div>
+          <div className="relative z-10 text-center p-6 max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-black mb-6 uppercase leading-tight tracking-tighter">
+              EL SECRETO QUE <br/><span className="text-amber-500">ELLOS NO QUIEREN</span> QUE SEPAS.
+            </h2>
+            <a 
+              href="https://go.hotmart.com/B103361602G" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="px-6 md:px-8 py-3 md:py-4 border-2 border-amber-500 text-amber-500 font-black rounded-full uppercase text-[10px] md:text-xs tracking-widest hover:bg-amber-500 hover:text-black transition-all inline-block shadow-[0_0_40px_rgba(245,158,11,0.2)]"
+            >
+              Ver La Prueba Real
+            </a>
+          </div>
+        </section>
+
+        <ChartShowcase />
+        
+        <Testimonials />
+        
+        <FAQ />
+
+        {/* Garantía - Espacios más ajustados */}
+        <section className="py-12 md:py-20 bg-gradient-to-b from-[#0a0a0a] to-black border-y border-white/5">
+          <div className="max-w-5xl mx-auto px-6">
+            <div className="glass p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] border border-amber-500/20 flex flex-col md:flex-row items-center gap-8 text-center md:text-left relative overflow-hidden">
+              <div className="shrink-0 relative group">
+                <div className="absolute inset-0 bg-amber-500/30 blur-3xl rounded-full animate-pulse group-hover:bg-amber-500/50 transition-all duration-700"></div>
+                <img 
+                  src="https://ciencursosonline.es/wp-content/uploads/2022/06/sello-garantia-hotmart.png" 
+                  alt="Sello Garantía" 
+                  className="w-32 h-32 md:w-48 md:h-48 object-contain relative z-10 filter drop-shadow-[0_0_30px_rgba(245,158,11,0.4)]"
+                />
+              </div>
+              
+              <div className="space-y-4 relative z-10">
+                <h4 className="text-2xl md:text-5xl font-black uppercase tracking-tighter leading-none">
+                  RIESGO <br/><span className="text-amber-500">CERO ABSOLUTO.</span>
+                </h4>
+                <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed max-w-xl">
+                  Tienes <strong>7 días completos</strong> para devorar el curso. Si no te gusta, pides el reembolso y listo. Sin preguntas.
+                </p>
+                <div className="flex flex-wrap justify-center md:justify-start gap-3 pt-2">
+                  <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full border border-white/10">
+                    <svg className="w-3 h-3 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <span className="text-[9px] font-black uppercase tracking-widest text-gray-300">Respaldo Hotmart</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <Countdown />
+        <Newsletter />
+      </main>
+
+      <Footer />
+      <Chatbot />
+      <FloatingCTA />
+
+      <style>{`
+        @keyframes fade-in-up {
+          from { opacity: 0; transform: translateY(40px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export default App;
+
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO & Social Sharing -->
+    <title>Invertir en Bolsa de Valores USA | Curso Maestro</title>
+    <meta name="description" content="Domina Wall Street con el sistema institucional de Smart Money Concepts.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Invertir en Bolsa de Valores USA | Formación Élite">
+    <meta property="og:description" content="Únete a la nueva generación de traders exitosos.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1611974717482-5da0027ad53b?q=80&w=1200&h=630&auto=format&fit=crop">
+    
+    <!-- Facebook Pixel -->
+    <script>
+      const FB_PIXEL_ID = '855754583749297'; 
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', FB_PIXEL_ID);
+      fbq('track', 'PageView');
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { scroll-padding-top: 80px; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #fbbf24, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 10px; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+    <!-- Punto de entrada para Vite -->
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  throw new Error("Could not find root element to mount to");
+}
+
+const root = ReactDOM.createRoot(rootElement);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+{
+  "name": "Invertir en Bolsa de Valores USA",
+  "description": "Página de aterrizaje élite para curso de trading profesional.",
+  "requestFramePermissions": []
+}
+
+{
+  "name": "landing-bolsa-usa",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@google/genai": "^1.35.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "recharts": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  }
+}
+
+
+# 📈 Invertir en Bolsa de Valores USA - Landing Page Élite
+
+Esta es una página de aterrizaje de alto rendimiento, diseñada para maximizar las conversiones de estudiantes interesados en el mercado de valores de Estados Unidos. Está optimizada para ser distribuida a través de Hotmart.
+
+## 🚀 Cómo guardar este proyecto en tu GitHub
+
+Sigue estos pasos para tener tu propia versión profesional en línea:
+
+1. **Crea un repositorio en GitHub**:
+   - Inicia sesión en tu cuenta de GitHub.
+   - Haz clic en el botón "+" y selecciona **"New repository"**.
+   - Ponle un nombre como `landing-bolsa-usa` y hazlo público.
+
+2. **Sube los archivos**:
+   - En la página de tu nuevo repositorio, haz clic en el enlace que dice **"uploading an existing file"**.
+   - Arrastra todos los archivos que hemos generado (`index.html`, `App.tsx`, `components/`, etc.) a la ventana del navegador.
+   - Haz clic en **"Commit changes"**.
+
+3. **Pon la página en línea (Hosting)**:
+   - Ve a [Vercel](https://vercel.com/) o [Netlify](https://www.netlify.com/).
+   - Conecta tu cuenta de GitHub.
+   - Selecciona el repositorio `landing-bolsa-usa`.
+   - **Importante**: En las variables de entorno (Environment Variables), añade una llamada `API_KEY` con tu clave de Google AI Studio para que el chatbot de Leonardo funcione.
+   - Haz clic en **"Deploy"**.
+
+## 🛠️ Tecnologías y Características
+- **React 19 & TypeScript**: Estructura robusta y moderna.
+- **Tailwind CSS**: Diseño "Dark Mode" premium y ultra-rápido.
+- **Google Gemini API**: Chatbot inteligente (Leonardo) para soporte 24/7.
+- **Recharts**: Gráficos interactivos de mercados reales.
+- **Optimización Hotmart**: Secciones de FAQ y Garantía diseñadas para cerrar ventas.
+
+---
+*Desarrollado con estándares de ingeniería de software de alto nivel.*
+
+
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["./**/*.ts", "./**/*.tsx"],
+  "exclude": ["node_modules", "dist"]
+}
+
+
+import React from 'react';
+
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
+
+export interface Message {
+  role: 'user' | 'model';
+  text: string;
+}
+
+export interface Feature {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+export interface NavItem {
+  label: string;
+  href: string;
+}
+
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  define: {
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY || "")
+  },
+  server: {
+    port: 3000,
+    host: true
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'recharts'],
+        },
+      },
+    },
+  }
+});
